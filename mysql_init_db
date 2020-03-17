@@ -1,0 +1,36 @@
+CREATE TABLE daily_info(
+	code varchar(100) not null,
+	name varchar(100) not null,
+	trade_date DATE not null,
+	changepercent FLOAT,
+	trade FLOAT,
+	open FLOAT,
+	high FLOAT,
+	low FLOAT,
+	settlement FLOAT,
+	volumn int8,
+	turnoverratio FLOAT,
+	amount int8,
+	per FLOAT,
+	pb FLOAT,
+	mktcap FLOAT,
+	nmc FLOAT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE 'daily_info' ADD PRIMARY KEY(code, trade_date);
+
+CREATE TABLE daily_features(
+	code varchar(100) not null,
+	market varchar(10) not null,
+	ts_code varchar(100) not null,
+	trade_date DATE not null,
+	turnover_rate FLOAT,
+	volumn_ratio FLOAT,
+	pe FLOAT,
+	pb FLOAT,
+	ps FLOAT,
+	dv_ratio FLOAT,
+	total_share FLOAT,
+	float_share FLOAT,
+	total_mv FLOAT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE 'daily_features' ADD PRIMARY KEY (code, trade_date);
