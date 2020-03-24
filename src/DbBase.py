@@ -1,4 +1,3 @@
-import mysql.connector
 import sqlalchemy
 from src.QueryBase import QueryBase
 from sqlalchemy.ext.declarative import declarative_base

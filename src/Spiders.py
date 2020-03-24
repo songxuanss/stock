@@ -1,13 +1,11 @@
 import datetime
 import traceback
-
 from pandas import DataFrame
 from src.DbBase import DbBase
 import pandas as pd
 
 
 class Spiders(DbBase):
-
     def __init__(self):
         pass
 
@@ -44,8 +42,7 @@ class Spiders(DbBase):
                 print(current_str)
 
 
-
 if __name__ == "__main__":
     sp = Spiders()
-    # sp.get_daily_basic("20190101")
-    sp.get_daily("20190101")
+    sp.get_daily("20200315")
+    sp.get_daily_basic("20200315")
