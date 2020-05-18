@@ -61,6 +61,10 @@ def pre1vol_currchange_core(df):
     sns.jointplot(x="pre1_amount", y="current_change", data=df, color="purple")
     plt.show()
 
+
+
+
+
 if __name__ == '__main__':
     # change_open_core(df_data)
     df_data = db_utils.get_daily_with_tmr_trade_data_by_tscode('000001.SZ')

@@ -1,4 +1,4 @@
-CREATE TABLE daily_info(
+CREATE TABLE daily(
 	code varchar(100) not null,
 	name varchar(100) not null,
 	trade_date DATE not null,
@@ -18,7 +18,7 @@ CREATE TABLE daily_info(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ALTER TABLE 'daily_info' ADD PRIMARY KEY(code, trade_date);
 
-CREATE TABLE daily_features(
+CREATE TABLE daily_basic(
 	code varchar(100) not null,
 	market varchar(10) not null,
 	ts_code varchar(100) not null,
