@@ -1,6 +1,6 @@
 import pandas as pd
 
-from DbBase import DbBase
+from QueryBase import DbBase
 
 
 def get_daily_by_tscode(ts_code):

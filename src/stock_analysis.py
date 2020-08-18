@@ -1,16 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from pandas import DataFrame
-from plotly.offline import iplot
-
-from DbBase import DbBase
-from utils.Alpha_code_101_1 import  Alphas, get_alpha
 import seaborn as sns
 from dao import db_utils
-import matplotlib as matlab
-from sklearn import preprocessing
-from bubbly.bubbly import bubbleplot
 
 daily_prime_col = ['open', 'close', 'pct_chg', 'vol', 'amount', 'change']
 daily_view_prime_col = ['pre1_change', 'current_change', 'pre1_amount', 'current_amount', 'pre1_vol', 'current_vol']
@@ -60,9 +52,6 @@ def pre1vol_currchange_core(df):
     df[daily_prime_col] = df_data[daily_prime_col] / df_data[daily_prime_col].max().astype(pd.np.float64)
     sns.jointplot(x="pre1_amount", y="current_change", data=df, color="purple")
     plt.show()
-
-
-
 
 
 if __name__ == '__main__':
